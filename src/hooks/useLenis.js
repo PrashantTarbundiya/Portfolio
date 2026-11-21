@@ -28,12 +28,21 @@ export default function useLenis() {
   const lenisRef = useRef(null);
 
   useEffect(() => {
+    // On touch devices (phones/tablets), let the native OS handle 120Hz/60Hz hardware scrolling
+    const isTouch = window.matchMedia('(pointer: coarse)').matches;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+      return;
+    }
+
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 0.6, // Snappy & responsive (prevents sluggish wheel delay)
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      touchMultiplier: 2,
-      // Crucial: prevent Lenis from intercepting scroll inside modals, drawers & CLI
+      smoothWheel: !isTouch,
+      wheelMultiplier: 1.0,
+      touchMultiplier: 1.0,
+      syncTouch: false, // Prevents touch hijacking on mobile
       prevent: (node) => {
         return Boolean(node?.closest?.('[data-lenis-prevent]'));
       },
@@ -42,12 +51,13 @@ export default function useLenis() {
     lenisRef.current = lenis;
     globalLenis = lenis;
 
+    let rafId;
     function raf(time) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      rafId = requestAnimationFrame(raf);
     }
 
-    const rafId = requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
 
     return () => {
       cancelAnimationFrame(rafId);

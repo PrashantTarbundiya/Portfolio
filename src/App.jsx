@@ -121,20 +121,20 @@ export default function App() {
     <div className="relative min-h-screen bg-[#08090d] text-[#f8fafc] font-sans selection:bg-lime-neon selection:text-black overflow-x-hidden">
       
       {/* =========================================================================
-          DYNAMIC ATMOSPHERIC MESH & SUBTLE GRID BACKGROUND
+          DYNAMIC ATMOSPHERIC MESH & SUBTLE GRID BACKGROUND (GPU-ACCELERATED)
           ========================================================================= */}
       <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
         
         {/* Subtle geometric dot matrix */}
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:28px_28px]"></div>
 
-        {/* Ambient Top Glow: Soft Indigo/Cyan atmospheric wash (replaces murky lime) */}
-        <div className="absolute -top-[15%] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.09)_0%,rgba(14,165,233,0.05)_40%,transparent_70%)] blur-[140px]"></div>
+        {/* Ambient Top Glow: Soft Indigo/Cyan atmospheric wash */}
+        <div className="absolute -top-[15%] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.08)_0%,rgba(14,165,233,0.04)_40%,transparent_70%)] pointer-events-none"></div>
 
-        {/* Luminous Colored Accent Lights (Soft, elegant ambient glow) */}
-        <div className="absolute top-[22%] -right-[8%] w-[650px] h-[650px] rounded-full bg-[#00f0ff]/6 blur-[160px] blob-2"></div>
-        <div className="absolute top-[52%] -left-[10%] w-[680px] h-[680px] rounded-full bg-[#EA9271]/6 blur-[160px] blob-3"></div>
-        <div className="absolute -bottom-[8%] right-[8%] w-[650px] h-[650px] rounded-full bg-[#8b5cf6]/7 blur-[150px] blob-1"></div>
+        {/* Luminous Colored Accent Lights (GPU-accelerated hardware radial textures, zero lag) */}
+        <div className="absolute top-[20%] -right-[8%] w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle_at_center,rgba(0,240,255,0.05)_0%,transparent_70%)] pointer-events-none"></div>
+        <div className="absolute top-[50%] -left-[10%] w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle_at_center,rgba(234,146,113,0.05)_0%,transparent_70%)] pointer-events-none"></div>
+        <div className="absolute bottom-[5%] right-[5%] w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle_at_center,rgba(139,92,246,0.05)_0%,transparent_70%)] pointer-events-none"></div>
 
         {/* Decorative Top Radar Ring */}
         <svg 

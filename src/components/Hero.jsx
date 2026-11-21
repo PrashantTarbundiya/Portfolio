@@ -23,7 +23,7 @@ export default function Hero({ onCopyEmail, onOpenCommandPalette, onOpenTerminal
     <section id="about" className="relative pt-28 pb-16 sm:pt-36 sm:pb-20 md:pt-44 md:pb-28 overflow-hidden">
       
       {/* Subtle Hero Radial Spotlight (Crisp Indigo-Teal Atmospheric Accent) */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[900px] h-[350px] sm:h-[450px] bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.08)_0%,rgba(14,165,233,0.04)_45%,transparent_70%)] pointer-events-none -z-10 blur-3xl"></div>
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[900px] h-[350px] sm:h-[450px] bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.08)_0%,rgba(14,165,233,0.04)_45%,transparent_70%)] pointer-events-none -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
