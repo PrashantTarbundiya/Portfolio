@@ -19,7 +19,16 @@ export default function Navbar({ onCopyEmail, onOpenCommandPalette, onOpenTermin
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [copied, setCopied] = useState(false);
-  const activeSection = useActiveSection();
+  const autoActiveSection = useActiveSection();
+  const [manualActiveSection, setManualActiveSection] = useState(null);
+  const activeSection = manualActiveSection || autoActiveSection;
+
+  const handleNavClick = (id) => {
+    setManualActiveSection(id);
+    setTimeout(() => {
+      setManualActiveSection(null);
+    }, 800);
+  };
 
   useEffect(() => {
     let ticking = false;
@@ -82,16 +91,17 @@ export default function Navbar({ onCopyEmail, onOpenCommandPalette, onOpenTermin
           </a>
 
           {/* Desktop Nav Links with Scroll Spy (Visible on lg and wider) */}
-          <nav className="hidden lg:flex items-center gap-1 bg-black/40 border border-white/10 rounded-full px-3 py-1 backdrop-blur-md">
+          <nav className="hidden lg:flex items-center gap-1 bg-black/50 border border-white/10 rounded-full p-1 backdrop-blur-md shadow-[inset_0_1px_2px_rgba(0,0,0,0.5),0_1px_0_rgba(255,255,255,0.08)]">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
               return (
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`px-3.5 py-1 text-xs font-mono uppercase tracking-wider rounded-full transition-all ${
+                  onClick={() => handleNavClick(link.id)}
+                  className={`px-3.5 py-1 text-xs font-mono uppercase tracking-wider rounded-full transition-all duration-200 ${
                     isActive 
-                      ? 'nav-link-active font-bold text-lime-neon shadow-[0_0_12px_rgba(200,255,0,0.25)]' 
+                      ? 'nav-link-active font-extrabold text-lime-neon' 
                       : 'text-gray-300 hover:text-white hover:bg-white/10'
                   }`}
                 >
@@ -236,10 +246,13 @@ export default function Navbar({ onCopyEmail, onOpenCommandPalette, onOpenTermin
                   <a
                     key={link.name}
                     href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => {
+                      handleNavClick(link.id);
+                      setMobileMenuOpen(false);
+                    }}
                     className={`px-3 py-2.5 rounded-xl text-xs sm:text-sm font-mono tracking-wide transition-all text-center ${
                       isActive 
-                        ? 'bg-lime-neon/15 text-lime-neon font-bold border border-lime-neon/40 shadow-sm shadow-lime-neon/20' 
+                        ? 'bg-lime-neon/20 text-lime-neon font-extrabold border border-lime-neon/50 shadow-[0_0_16px_rgba(200,255,0,0.35),inset_0_1px_1px_rgba(255,255,255,0.3)]' 
                         : 'bg-white/5 text-gray-200 hover:text-white hover:bg-white/10 border border-white/5'
                     }`}
                   >

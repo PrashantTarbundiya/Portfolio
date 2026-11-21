@@ -10,38 +10,68 @@ const SECTION_IDS = [
 ];
 
 export default function useActiveSection() {
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState('about');
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        // Find the entry with the highest intersection ratio
-        let best = null;
-        for (const entry of entries) {
-          if (
-            entry.isIntersecting &&
-            (!best || entry.intersectionRatio > best.intersectionRatio)
-          ) {
-            best = entry;
+    let ticking = false;
+
+    const determineActiveSection = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+
+      // 1. If at or near bottom of document, activate last section ('contact')
+      if (scrollY + windowHeight >= docHeight - 80) {
+        setActiveSection('contact');
+        return;
+      }
+
+      // 2. If near the top, activate first section ('about')
+      if (scrollY < 180) {
+        setActiveSection('about');
+        return;
+      }
+
+      // 3. Anchor line for detecting section in view (200px below top of viewport)
+      const anchorLine = 200;
+
+      let current = 'about';
+      for (const id of SECTION_IDS) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          // If section top has scrolled to or past the anchor line
+          if (rect.top <= anchorLine) {
+            current = id;
           }
         }
-        if (best) {
-          setActiveSection(best.target.id);
-        }
-      },
-      {
-        rootMargin: '-20% 0px -60% 0px',
-        threshold: 0.2,
       }
-    );
 
-    const elements = SECTION_IDS.map((id) =>
-      document.getElementById(id)
-    ).filter(Boolean);
+      setActiveSection(current);
+    };
 
-    elements.forEach((el) => observer.observe(el));
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          determineActiveSection();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
 
-    return () => observer.disconnect();
+    // Initial check on mount and after a short tick when DOM has rendered
+    determineActiveSection();
+    const timer = setTimeout(determineActiveSection, 120);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll, { passive: true });
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
   }, []);
 
   return activeSection;
