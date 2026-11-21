@@ -44,7 +44,7 @@ export default function AuraPassShowcase({ onOpenArchitectureModal }) {
   ];
 
   return (
-    <article className="relative rounded-2xl sm:rounded-3xl overflow-hidden glass-card p-5 sm:p-8 lg:p-11 mb-10 sm:mb-14 border border-lime-neon/40 shadow-[inset_1px_1px_0_0_rgba(255,255,255,0.4),0_28px_70px_-15px_rgba(0,0,0,0.85)] group">
+    <article className="relative rounded-2xl sm:rounded-3xl overflow-hidden glass-card glass-card-glow p-5 sm:p-8 lg:p-11 mb-10 sm:mb-14 border border-lime-neon/40 shadow-[inset_0_1px_1.5px_0_rgba(255,255,255,0.35),0_4px_12px_0_rgba(0,0,0,0.5),0_24px_60px_-8px_rgba(0,0,0,0.85)] group">
       
       {/* Top Luminous Neon Bar */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-lime-neon to-transparent opacity-90 shadow-[0_0_15px_#c8ff00]"></div>

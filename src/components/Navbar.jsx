@@ -69,8 +69,8 @@ export default function Navbar({ onCopyEmail, onOpenCommandPalette, onOpenTermin
       {/* Floating Glass Capsule Navigation Bar */}
       <div className={`max-w-7xl mx-auto rounded-full transition-all duration-300 ${
         scrolled 
-          ? 'bg-[#0b0e14]/85 backdrop-blur-2xl border border-white/15 shadow-[inset_1px_1px_0_0_rgba(255,255,255,0.3),0_18px_45px_-10px_rgba(0,0,0,0.85)] py-2 sm:py-2.5 px-3.5 sm:px-6' 
-          : 'bg-[#0e111a]/70 backdrop-blur-xl border border-white/10 shadow-[inset_1px_1px_0_0_rgba(255,255,255,0.2),0_10px_30px_-10px_rgba(0,0,0,0.6)] py-2.5 sm:py-3 px-4 sm:px-6'
+          ? 'glass-navbar glass-navbar-scrolled py-2 sm:py-2.5 px-3.5 sm:px-6' 
+          : 'glass-navbar py-2.5 sm:py-3 px-4 sm:px-6'
       }`}>
         <div className="flex items-center justify-between gap-2">
           
@@ -207,7 +207,7 @@ export default function Navbar({ onCopyEmail, onOpenCommandPalette, onOpenTermin
       {mobileMenuOpen && (
         <div 
           data-lenis-prevent="true"
-          className="lg:hidden mt-2.5 max-w-7xl mx-auto rounded-2xl sm:rounded-3xl glass-card p-4 sm:p-6 border border-white/20 animate-in slide-in-from-top-3 duration-200 shadow-[0_20px_60px_rgba(0,0,0,0.9)] overflow-y-auto max-h-[80vh]"
+          className="lg:hidden mt-2.5 max-w-7xl mx-auto rounded-2xl sm:rounded-3xl glass-modal p-4 sm:p-6 border border-white/20 animate-in slide-in-from-top-3 duration-200 overflow-y-auto max-h-[80vh]"
         >
           <div className="flex flex-col gap-3">
             {/* Top Bar & Terminal */}

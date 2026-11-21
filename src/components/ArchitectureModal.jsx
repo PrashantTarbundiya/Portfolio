@@ -26,7 +26,7 @@ export default function ArchitectureModal({ isOpen, onClose }) {
     >
       <div 
         data-lenis-prevent="true"
-        className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-2xl sm:rounded-3xl glass-card border border-white/25 p-4 sm:p-7 md:p-9 shadow-[0_30px_90px_rgba(0,0,0,0.95)]"
+        className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-2xl sm:rounded-3xl glass-modal p-4 sm:p-7 md:p-9"
         onClick={(e) => e.stopPropagation()}
         onWheel={(e) => e.stopPropagation()}
       >
