@@ -102,4 +102,4 @@ Or connect your GitHub repository directly to Vercel for automatic continuous de
 - **GitHub**: [github.com/PrashantTarbundiya](https://github.com/PrashantTarbundiya)
 - **LinkedIn**: [linkedin.com/in/prashant-tarbundiya](https://linkedin.com/in/prashant-tarbundiya)
 - **LeetCode**: [leetcode.com/u/sRj6itRSrz/](https://leetcode.com/u/sRj6itRSrz/)
-- **Codeforces**: [codeforces.com/profile/prashanttarbundiya](https://codeforces.com/profile/prashanttarbundiya)
+- **Codeforces**: [codeforces.com/profile/Prashant1304](https://codeforces.com/profile/Prashant1304)

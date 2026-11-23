@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Prashant Tarbundiya",
   role: "Full Stack Developer & Systems Engineer",
   subRole: "B.Tech. in Computer Science and Engineering @ Institute of Technology, Nirma University",
-  status: "Available for Summer 2026 SWE Internships & Full-Time Roles",
+  status: "Available for Winter 2027 SWE Internships & Full-Time Roles",
   email: "prashanttarbundiya2@gmail.com",
   location: "Ahmedabad / Gujarat, India",
   summary:
@@ -12,7 +12,7 @@ export const personalInfo = {
     github: "https://github.com/PrashantTarbundiya",
     linkedin: "https://linkedin.com/in/prashant-tarbundiya",
     leetcode: "https://leetcode.com/u/sRj6itRSrz/",
-    codeforces: "https://codeforces.com/profile/prashanttarbundiya",
+    codeforces: "https://codeforces.com/profile/Prashant1304",
     email: "mailto:prashanttarbundiya2@gmail.com",
   },
 };
@@ -401,7 +401,7 @@ export const achievements = [
     organization: "Competitive Programming",
     tag: "Active Competitor",
     desc: "Actively solving algorithmic challenges under strict real-time complexity and memory constraints on Codeforces.",
-    link: "https://codeforces.com/profile/prashanttarbundiya",
+    link: "https://codeforces.com/profile/Prashant1304",
     icon: "terminal",
     color: "cyan",
   },

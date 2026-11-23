@@ -190,7 +190,7 @@ export default function ContactSection({ onCopyEmail, showToast }) {
                 Let's Build &amp; Collaborate
               </h2>
               <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8">
-                I am actively seeking Software Engineering Internships and Full-Time Roles for Summer 2026. Reach out directly with technical questions, interview invitations, or system architecture discussions.
+                I am actively seeking Software Engineering Internships for Winter 2027 and Full-Time Roles. Reach out directly with technical questions, interview invitations, or system architecture discussions.
               </p>
 
               {/* One-Click Email Copy Bar (Responsive layout) */}
@@ -333,7 +333,7 @@ export default function ContactSection({ onCopyEmail, showToast }) {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      placeholder="Summer 2026 Software Engineer Internship"
+                      placeholder="Winter 2027 SWE Internship / Full-Time Role"
                       className={`w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl glass-input ${
                         errors.subject ? 'border-rose-500' : 'border-white/10'
                       } text-xs sm:text-sm text-white placeholder-gray-500 outline-none`}
@@ -437,7 +437,7 @@ export default function ContactSection({ onCopyEmail, showToast }) {
 
             <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl glass-card border-lime-neon/30 mt-3 sm:mt-4 text-xs font-mono text-gray-300 shadow-[0_0_20px_rgba(200,255,0,0.08)]">
               <span className="text-lime-neon font-bold block mb-1">Direct Outreach</span>
-              All credentials and code repos verified. Ready for Summer 2026 SWE opportunities.
+              All credentials and code repos verified. Ready for Winter 2027 &amp; Full-Time SWE opportunities.
             </div>
 
           </div>
