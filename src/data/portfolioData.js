@@ -3,6 +3,7 @@ export const personalInfo = {
   role: "Full Stack Developer & Systems Engineer",
   subRole: "B.Tech. in Computer Science and Engineering @ Institute of Technology, Nirma University",
   status: "Available for Winter 2027 SWE Internships & Full-Time Roles",
+  portfolioUrl: "https://prashanttarbundiya.vercel.app",
   email: "prashanttarbundiya2@gmail.com",
   location: "Ahmedabad / Gujarat, India",
   summary:

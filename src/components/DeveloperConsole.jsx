@@ -134,6 +134,7 @@ ${e.bullets.map(b => `  - ${b}`).join('\n')}`
         newHistory.push({
           type: 'response',
           text: `CONTACT & NETWORK:
+Portfolio: ${personalInfo.portfolioUrl || 'https://prashanttarbundiya.vercel.app/'}
 Email: ${personalInfo.email}
 GitHub: ${personalInfo.socials.github}
 LinkedIn: ${personalInfo.socials.linkedin}

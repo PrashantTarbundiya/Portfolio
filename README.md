@@ -1,7 +1,9 @@
 # Prashant Tarbundiya — Engineering Portfolio 2.0
 ### High-Performance Developer Portfolio & Systems Architecture Showcase
 
-A luxury, high-performance developer portfolio built with **React 18**, **Tailwind CSS**, and **Vite**, featuring luxury **Glassmorphism**, dynamic **Atmospheric Mesh**, **Lenis Smooth Inertia Scrolling**, **Interactive Developer CLI (`~`)**, and **Command Palette (`⌘K`)**.
+> **Live Deployment**: [prashanttarbundiya.vercel.app](https://prashanttarbundiya.vercel.app/)
+
+A luxury, high-performance developer portfolio built with **React 18**, **Tailwind CSS**, and **Vite**, featuring luxury **Glassmorphism**, dynamic **Atmospheric Mesh**, **Interactive Developer CLI (`~`)**, and **Command Palette (`⌘K`)**.
 
 ---
 
@@ -98,6 +100,7 @@ Or connect your GitHub repository directly to Vercel for automatic continuous de
 ---
 
 ## 📬 Contact & Handles
+- **Live Portfolio**: [prashanttarbundiya.vercel.app](https://prashanttarbundiya.vercel.app/)
 - **Email**: `prashanttarbundiya2@gmail.com`
 - **GitHub**: [github.com/PrashantTarbundiya](https://github.com/PrashantTarbundiya)
 - **LinkedIn**: [linkedin.com/in/prashant-tarbundiya](https://linkedin.com/in/prashant-tarbundiya)
