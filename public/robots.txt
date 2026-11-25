@@ -1,0 +1,9 @@
+# Robots.txt for Prashant Tarbundiya Portfolio
+User-agent: *
+Allow: /
+
+# Disallow private/internal paths if any
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://prashanttarbundiya.vercel.app/sitemap.xml
