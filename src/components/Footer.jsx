@@ -45,9 +45,11 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-gray-400">
-          <p>© {currentYear} {personalInfo.name}. All rights reserved.</p>
-          <p className="text-gray-400 flex items-center gap-2">
-            <span>Engineered with React 18, Tailwind CSS &amp; Lenis</span>
+          <p>© {currentYear} {personalInfo.name} (@prashanttarbundiya). All rights reserved.</p>
+          <p className="text-gray-400 flex items-center gap-3">
+            <a href="/sitemap.xml" className="hover:text-lime-neon transition-colors">Sitemap</a>
+            <span>•</span>
+            <span>Engineered with React 18 &amp; Tailwind CSS</span>
           </p>
         </div>
 
